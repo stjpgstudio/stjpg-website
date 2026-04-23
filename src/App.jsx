@@ -1,7 +1,18 @@
 import React from "react";
 import { useForm } from "@formspree/react";
 import { motion } from "framer-motion";
-import { Camera, Drone, Video, Home, CheckCircle, Phone, Mail, MapPin, ArrowRight, Star } from "lucide-react";
+import {
+  Camera,
+  Drone,
+  Video,
+  Home,
+  CheckCircle,
+  Phone,
+  Mail,
+  MapPin,
+  ArrowRight,
+  Star,
+} from "lucide-react";
 
 export default function RealEstateMediaWebsite() {
   const services = [
@@ -36,6 +47,37 @@ export default function RealEstateMediaWebsite() {
     { sqft: "5,501+ sq ft", price: "Custom Quote" },
   ];
 
+  const portfolioItems = [
+    {
+      title: "Thumbnail",
+      image: "/OUTSIDE.jpg",
+    },
+    {
+      title: "Interior Photo",
+      image: "/INSIDE1.jpg",
+    },
+    {
+      title: "Interior Detail",
+      image: "/INSIDE2.jpg",
+    },
+    {
+      title: "Drone Exterior",
+      image: "",
+    },
+    {
+      title: "Neighbourhood Shot",
+      image: "",
+    },
+    {
+      title: "Twilight Exterior",
+      image: "",
+    },
+    {
+      title: "Social Reel",
+      image: "",
+    },
+  ];
+
   const [state, handleQuoteSubmit] = useForm("xgornrag");
 
   return (
@@ -51,13 +93,24 @@ export default function RealEstateMediaWebsite() {
           </div>
 
           <nav className="hidden items-center gap-8 text-sm text-neutral-300 md:flex">
-            <a href="#services" className="hover:text-white">Services</a>
-            <a href="#work" className="hover:text-white">Portfolio</a>
-            <a href="#pricing" className="hover:text-white">Pricing</a>
-            <a href="#contact" className="hover:text-white">Contact</a>
+            <a href="#services" className="hover:text-white">
+              Services
+            </a>
+            <a href="#work" className="hover:text-white">
+              Portfolio
+            </a>
+            <a href="#pricing" className="hover:text-white">
+              Pricing
+            </a>
+            <a href="#contact" className="hover:text-white">
+              Contact
+            </a>
           </nav>
 
-          <a href="#contact" className="hidden rounded-full bg-white px-5 py-2 text-sm font-semibold text-neutral-950 transition hover:bg-neutral-200 md:block">
+          <a
+            href="#contact"
+            className="hidden rounded-full bg-white px-5 py-2 text-sm font-semibold text-neutral-950 transition hover:bg-neutral-200 md:block"
+          >
             Book a Shoot
           </a>
         </div>
@@ -71,7 +124,11 @@ export default function RealEstateMediaWebsite() {
           </div>
 
           <div className="relative mx-auto grid max-w-7xl items-center gap-12 md:grid-cols-2">
-            <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
+            <motion.div
+              initial={{ opacity: 0, y: 24 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+            >
               <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-2 text-sm text-neutral-300">
                 <Star size={16} /> Toronto & GTA Real Estate Media
               </div>
@@ -81,20 +138,34 @@ export default function RealEstateMediaWebsite() {
               </h1>
 
               <p className="mt-6 max-w-xl text-lg leading-8 text-neutral-300">
-                Professional HDR photos, drone footage, listing videos, and social media content for real estate agents who want more attention, better first impressions, and stronger listing presentation.
+                Professional HDR photos, drone footage, listing videos, and
+                social media content for real estate agents who want more
+                attention, better first impressions, and stronger listing
+                presentation.
               </p>
 
               <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-                <a href="#contact" className="inline-flex items-center justify-center gap-2 rounded-full bg-white px-7 py-4 font-semibold text-neutral-950 transition hover:bg-neutral-200">
+                <a
+                  href="#contact"
+                  className="inline-flex items-center justify-center gap-2 rounded-full bg-white px-7 py-4 font-semibold text-neutral-950 transition hover:bg-neutral-200"
+                >
                   Get a Quote <ArrowRight size={18} />
                 </a>
-                <a href="#work" className="inline-flex items-center justify-center rounded-full border border-white/15 px-7 py-4 font-semibold text-white transition hover:bg-white/10">
+                <a
+                  href="#work"
+                  className="inline-flex items-center justify-center rounded-full border border-white/15 px-7 py-4 font-semibold text-white transition hover:bg-white/10"
+                >
                   View Portfolio
                 </a>
               </div>
             </motion.div>
 
-            <motion.div initial={{ opacity: 0, scale: 0.96 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.7 }} className="relative">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.96 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.7 }}
+              className="relative"
+            >
               <div className="rounded-[2rem] border border-white/10 bg-white/5 p-8 shadow-2xl">
                 <div className="flex aspect-[4/5] flex-col items-center justify-center overflow-hidden rounded-[1.5rem] bg-gradient-to-br from-neutral-900 via-black to-neutral-950 p-8 text-center">
                   <img
@@ -103,9 +174,16 @@ export default function RealEstateMediaWebsite() {
                     className="w-full max-w-md object-contain drop-shadow-2xl"
                   />
                   <div className="mt-8 rounded-3xl bg-white/[0.06] p-6 backdrop-blur-md">
-                    <p className="text-sm uppercase tracking-[0.25em] text-neutral-300">Photography Studio</p>
-                    <h3 className="mt-2 text-3xl font-bold">HDR + Drone + Reel</h3>
-                    <p className="mt-3 text-neutral-300">Premium real estate media including HDR photos, drone coverage, video, and floor plans.</p>
+                    <p className="text-sm uppercase tracking-[0.25em] text-neutral-300">
+                      Photography Studio
+                    </p>
+                    <h3 className="mt-2 text-3xl font-bold">
+                      HDR + Drone + Reel
+                    </h3>
+                    <p className="mt-3 text-neutral-300">
+                      Premium real estate media including HDR photos, drone
+                      coverage, video, and floor plans.
+                    </p>
                   </div>
                 </div>
               </div>
@@ -116,18 +194,27 @@ export default function RealEstateMediaWebsite() {
         <section id="services" className="px-6 py-20">
           <div className="mx-auto max-w-7xl">
             <div className="max-w-2xl">
-              <p className="text-sm font-semibold uppercase tracking-[0.25em] text-neutral-400">Services</p>
-              <h2 className="mt-3 text-4xl font-bold md:text-5xl">Everything agents need to market a listing.</h2>
+              <p className="text-sm font-semibold uppercase tracking-[0.25em] text-neutral-400">
+                Services
+              </p>
+              <h2 className="mt-3 text-4xl font-bold md:text-5xl">
+                Everything agents need to market a listing.
+              </h2>
             </div>
 
             <div className="mt-12 grid gap-5 md:grid-cols-4">
               {services.map((service) => (
-                <div key={service.title} className="rounded-3xl border border-white/10 bg-white/[0.04] p-6 transition hover:bg-white/[0.08]">
+                <div
+                  key={service.title}
+                  className="rounded-3xl border border-white/10 bg-white/[0.04] p-6 transition hover:bg-white/[0.08]"
+                >
                   <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-white text-neutral-950">
                     <service.icon size={24} />
                   </div>
                   <h3 className="text-xl font-bold">{service.title}</h3>
-                  <p className="mt-3 leading-7 text-neutral-400">{service.text}</p>
+                  <p className="mt-3 leading-7 text-neutral-400">
+                    {service.text}
+                  </p>
                 </div>
               ))}
             </div>
@@ -138,10 +225,17 @@ export default function RealEstateMediaWebsite() {
           <div className="mx-auto max-w-7xl rounded-[2rem] border border-white/10 bg-white/[0.04] p-8 md:p-12">
             <div className="grid gap-10 md:grid-cols-2 md:items-center">
               <div>
-                <p className="text-sm font-semibold uppercase tracking-[0.25em] text-neutral-400">Drone Media</p>
-                <h2 className="mt-3 text-4xl font-bold md:text-5xl">Why agents need drone photos and video.</h2>
+                <p className="text-sm font-semibold uppercase tracking-[0.25em] text-neutral-400">
+                  Drone Media
+                </p>
+                <h2 className="mt-3 text-4xl font-bold md:text-5xl">
+                  Why agents need drone photos and video.
+                </h2>
                 <p className="mt-5 leading-8 text-neutral-300">
-                  Drone media helps buyers understand more than just the house. It shows the full property, lot size, backyard, street, neighbourhood, parks, schools, and nearby features that regular ground photos cannot show clearly.
+                  Drone media helps buyers understand more than just the house.
+                  It shows the full property, lot size, backyard, street,
+                  neighbourhood, parks, schools, and nearby features that
+                  regular ground photos cannot show clearly.
                 </p>
               </div>
 
@@ -153,7 +247,10 @@ export default function RealEstateMediaWebsite() {
                   "Helps agents stand out on MLS, Instagram, TikTok, and YouTube",
                   "Gives buyers a better first impression before they book a showing",
                 ].map((text) => (
-                  <div key={text} className="flex items-start gap-3 rounded-2xl bg-white/[0.05] p-4 text-neutral-200">
+                  <div
+                    key={text}
+                    className="flex items-start gap-3 rounded-2xl bg-white/[0.05] p-4 text-neutral-200"
+                  >
                     <CheckCircle className="mt-1 shrink-0" size={20} />
                     <span>{text}</span>
                   </div>
@@ -167,19 +264,43 @@ export default function RealEstateMediaWebsite() {
           <div className="mx-auto max-w-7xl">
             <div className="mb-10 flex flex-col justify-between gap-5 md:flex-row md:items-end">
               <div>
-                <p className="text-sm font-semibold uppercase tracking-[0.25em] text-neutral-400">Portfolio</p>
-                <h2 className="mt-3 text-4xl font-bold md:text-5xl">Recent listing style.</h2>
+                <p className="text-sm font-semibold uppercase tracking-[0.25em] text-neutral-400">
+                  Portfolio
+                </p>
+                <h2 className="mt-3 text-4xl font-bold md:text-5xl">
+                  Recent listing style.
+                </h2>
               </div>
-              <p className="max-w-md text-neutral-400">Replace these boxes with your real house photos, drone shots, and video thumbnails once you build your portfolio.</p>
+              <p className="max-w-md text-neutral-400">
+                A sample of our real estate photography, drone coverage, and
+                listing media.
+              </p>
             </div>
 
             <div className="grid gap-5 md:grid-cols-3">
-              {["Modern Interior", "Drone Exterior", "Luxury Kitchen", "Neighbourhood Shot", "Twilight Exterior", "Social Reel"].map((item, index) => (
-                <div key={item} className={`group overflow-hidden rounded-3xl border border-white/10 bg-white/[0.04] ${index === 0 ? "md:col-span-2" : ""}`}>
-                  <div className="flex aspect-video items-end bg-gradient-to-br from-neutral-700 to-neutral-950 p-6 transition duration-300 group-hover:scale-[1.02]">
-                    <div>
-                      <p className="text-sm text-neutral-300">Project {index + 1}</p>
-                      <h3 className="text-2xl font-bold">{item}</h3>
+              {portfolioItems.map((item, index) => (
+                <div
+                  key={item.title}
+                  className={`group overflow-hidden rounded-3xl border border-white/10 bg-white/[0.04] ${
+                    index === 0 ? "md:col-span-2" : ""
+                  }`}
+                >
+                  <div className="relative flex aspect-video items-end overflow-hidden bg-gradient-to-br from-neutral-700 to-neutral-950 p-6">
+                    {item.image && (
+                      <img
+                        src={item.image}
+                        alt={item.title}
+                        className="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                      />
+                    )}
+
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+
+                    <div className="relative z-10">
+                      <p className="text-sm text-neutral-300">
+                        Project {index + 1}
+                      </p>
+                      <h3 className="text-2xl font-bold">{item.title}</h3>
                     </div>
                   </div>
                 </div>
@@ -191,19 +312,34 @@ export default function RealEstateMediaWebsite() {
         <section id="pricing" className="px-6 py-20">
           <div className="mx-auto max-w-7xl">
             <div className="max-w-2xl">
-              <p className="text-sm font-semibold uppercase tracking-[0.25em] text-neutral-400">Pricing</p>
-              <h2 className="mt-3 text-4xl font-bold md:text-5xl">Get a quote based on property size.</h2>
-              <p className="mt-4 text-neutral-400">Enter the square footage of the home to choose the right price range. Every price includes HDR photos, drone photos, drone video, a video walkthrough of the house, and a floor plan.</p>
+              <p className="text-sm font-semibold uppercase tracking-[0.25em] text-neutral-400">
+                Pricing
+              </p>
+              <h2 className="mt-3 text-4xl font-bold md:text-5xl">
+                Get a quote based on property size.
+              </h2>
+              <p className="mt-4 text-neutral-400">
+                Enter the square footage of the home to choose the right price
+                range. Every price includes HDR photos, drone photos, drone
+                video, a video walkthrough of the house, and a floor plan.
+              </p>
             </div>
 
             <div className="mt-12 grid gap-8 md:grid-cols-2">
               <div className="rounded-3xl border border-white/10 bg-white/[0.04] p-7">
-                <h3 className="text-2xl font-bold">Quote by square footage</h3>
-                <p className="mt-2 text-neutral-400">Choose the size range that matches the property.</p>
+                <h3 className="text-2xl font-bold">
+                  Quote by square footage
+                </h3>
+                <p className="mt-2 text-neutral-400">
+                  Choose the size range that matches the property.
+                </p>
 
                 <div className="mt-6 space-y-3">
                   {priceTiers.map((tier) => (
-                    <div key={tier.sqft} className="flex items-center justify-between rounded-2xl bg-white/[0.05] px-5 py-4">
+                    <div
+                      key={tier.sqft}
+                      className="flex items-center justify-between rounded-2xl bg-white/[0.05] px-5 py-4"
+                    >
                       <span className="text-neutral-200">{tier.sqft}</span>
                       <span className="text-xl font-bold">{tier.price}</span>
                     </div>
@@ -212,15 +348,35 @@ export default function RealEstateMediaWebsite() {
               </div>
 
               <div className="rounded-3xl border border-white/10 bg-white/[0.04] p-7">
-                <h3 className="text-2xl font-bold">Included with every price</h3>
+                <h3 className="text-2xl font-bold">
+                  Included with every price
+                </h3>
                 <div className="mt-6 space-y-4 text-neutral-300">
-                  <div className="flex gap-3"><CheckCircle className="mt-1 shrink-0" size={20} /> HDR interior and exterior photos</div>
-                  <div className="flex gap-3"><CheckCircle className="mt-1 shrink-0" size={20} /> Drone photos</div>
-                  <div className="flex gap-3"><CheckCircle className="mt-1 shrink-0" size={20} /> Drone video</div>
-                  <div className="flex gap-3"><CheckCircle className="mt-1 shrink-0" size={20} /> Professional 60 seconds horizontal video</div>
-                  <div className="flex gap-3"><CheckCircle className="mt-1 shrink-0" size={20} /> Floor plan</div>
+                  <div className="flex gap-3">
+                    <CheckCircle className="mt-1 shrink-0" size={20} /> HDR
+                    interior and exterior photos
+                  </div>
+                  <div className="flex gap-3">
+                    <CheckCircle className="mt-1 shrink-0" size={20} /> Drone
+                    photos
+                  </div>
+                  <div className="flex gap-3">
+                    <CheckCircle className="mt-1 shrink-0" size={20} /> Drone
+                    video
+                  </div>
+                  <div className="flex gap-3">
+                    <CheckCircle className="mt-1 shrink-0" size={20} />{" "}
+                    Professional 60 seconds horizontal video
+                  </div>
+                  <div className="flex gap-3">
+                    <CheckCircle className="mt-1 shrink-0" size={20} /> Floor
+                    plan
+                  </div>
                 </div>
-                <a href="#contact" className="mt-8 inline-flex items-center justify-center gap-2 rounded-full bg-white px-7 py-4 font-semibold text-neutral-950 transition hover:bg-neutral-200">
+                <a
+                  href="#contact"
+                  className="mt-8 inline-flex items-center justify-center gap-2 rounded-full bg-white px-7 py-4 font-semibold text-neutral-950 transition hover:bg-neutral-200"
+                >
                   Request Quote <ArrowRight size={18} />
                 </a>
               </div>
@@ -232,11 +388,21 @@ export default function RealEstateMediaWebsite() {
           <div className="mx-auto grid max-w-7xl gap-8 rounded-[2rem] border border-white/10 bg-white/[0.04] p-8 md:grid-cols-3 md:p-12">
             <div>
               <h3 className="text-3xl font-bold">Why agents choose us</h3>
-              <p className="mt-3 text-neutral-400">Fast, reliable media that helps listings stand out.</p>
+              <p className="mt-3 text-neutral-400">
+                Fast, reliable media that helps listings stand out.
+              </p>
             </div>
             <div className="md:col-span-2 grid gap-4 sm:grid-cols-2">
-              {["Fast turnaround", "Clean editing style", "Drone neighbourhood coverage", "Content made for social media"].map((text) => (
-                <div key={text} className="flex items-center gap-3 rounded-2xl bg-white/[0.05] p-4">
+              {[
+                "Fast turnaround",
+                "Clean editing style",
+                "Drone neighbourhood coverage",
+                "Content made for social media",
+              ].map((text) => (
+                <div
+                  key={text}
+                  className="flex items-center gap-3 rounded-2xl bg-white/[0.05] p-4"
+                >
                   <CheckCircle size={20} />
                   <span>{text}</span>
                 </div>
@@ -248,10 +414,16 @@ export default function RealEstateMediaWebsite() {
         <section id="contact" className="px-6 py-20">
           <div className="mx-auto grid max-w-7xl gap-10 md:grid-cols-2">
             <div>
-              <p className="text-sm font-semibold uppercase tracking-[0.25em] text-neutral-400">Contact</p>
-              <h2 className="mt-3 text-4xl font-bold md:text-5xl">Book your next listing shoot.</h2>
+              <p className="text-sm font-semibold uppercase tracking-[0.25em] text-neutral-400">
+                Contact
+              </p>
+              <h2 className="mt-3 text-4xl font-bold md:text-5xl">
+                Book your next listing shoot.
+              </h2>
               <p className="mt-5 max-w-lg leading-8 text-neutral-300">
-                Send the property address, square footage, and ideal shoot date. All pricing includes HDR photos, drone photos, drone video, house video, and a floor plan.
+                Send the property address, square footage, and ideal shoot date.
+                All pricing includes HDR photos, drone photos, drone video,
+                house video, and a floor plan.
               </p>
 
               <div className="mt-8 space-y-4 text-neutral-300">
@@ -262,12 +434,19 @@ export default function RealEstateMediaWebsite() {
                     <p>416 702 5809</p>
                   </div>
                 </div>
-                <div className="flex items-center gap-3"><Mail size={20} /> stjpgstudio@gmail.com</div>
-                <div className="flex items-center gap-3"><MapPin size={20} /> Toronto, Richmond Hill, Markham & GTA</div>
+                <div className="flex items-center gap-3">
+                  <Mail size={20} /> stjpgstudio@gmail.com
+                </div>
+                <div className="flex items-center gap-3">
+                  <MapPin size={20} /> Toronto, Richmond Hill, Markham & GTA
+                </div>
               </div>
             </div>
 
-            <form onSubmit={handleQuoteSubmit} className="rounded-3xl border border-white/10 bg-white/[0.04] p-6">
+            <form
+              onSubmit={handleQuoteSubmit}
+              className="rounded-3xl border border-white/10 bg-white/[0.04] p-6"
+            >
               <div className="grid gap-4">
                 <input
                   name="name"
@@ -289,7 +468,10 @@ export default function RealEstateMediaWebsite() {
                   className="rounded-2xl border border-white/10 bg-neutral-900 px-4 py-4 text-white outline-none focus:border-white/40"
                   placeholder="House size in sq ft, example: 2,100"
                 />
-                <select name="packageRange" className="rounded-2xl border border-white/10 bg-neutral-900 px-4 py-4 text-white outline-none focus:border-white/40">
+                <select
+                  name="packageRange"
+                  className="rounded-2xl border border-white/10 bg-neutral-900 px-4 py-4 text-white outline-none focus:border-white/40"
+                >
                   <option>Up to 1,500 sq ft - $250</option>
                   <option>1,501 - 2,500 sq ft - $350</option>
                   <option>2,501 - 3,500 sq ft - $450</option>
@@ -324,7 +506,10 @@ export default function RealEstateMediaWebsite() {
       <footer className="border-t border-white/10 px-6 py-8">
         <div className="mx-auto flex max-w-7xl flex-col justify-between gap-4 text-sm text-neutral-400 md:flex-row">
           <p>© 2026 STJPG. All rights reserved.</p>
-          <p>Real estate photography, drone media, and listing videos for the GTA.</p>
+          <p>
+            Real estate photography, drone media, and listing videos for the
+            GTA.
+          </p>
         </div>
       </footer>
     </div>
