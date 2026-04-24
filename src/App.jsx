@@ -90,10 +90,10 @@ export default function RealEstateMediaWebsite() {
       </header>
 
       <main>
-        <section className="relative overflow-hidden px-6 pt-32 pb-20 md:pt-44 md:pb-28">
+        <section className="relative overflow-hidden px-6 pb-20 pt-32 md:pb-28 md:pt-44">
           <div className="absolute inset-0 opacity-30">
             <div className="absolute left-1/2 top-10 h-80 w-80 -translate-x-1/2 rounded-full bg-white/20 blur-3xl" />
-            <div className="absolute right-10 bottom-10 h-72 w-72 rounded-full bg-neutral-500/30 blur-3xl" />
+            <div className="absolute bottom-10 right-10 h-72 w-72 rounded-full bg-neutral-500/30 blur-3xl" />
           </div>
 
           <div className="relative mx-auto grid max-w-7xl items-center gap-12 md:grid-cols-2">
@@ -139,21 +139,22 @@ export default function RealEstateMediaWebsite() {
               transition={{ duration: 0.7 }}
               className="relative"
             >
-              <div className="rounded-[2rem] border border-white/10 bg-white/5 p-8 shadow-2xl">
-                <div className="flex aspect-[4/5] flex-col items-center justify-center overflow-hidden rounded-[1.5rem] bg-gradient-to-br from-neutral-900 via-black to-neutral-950 p-8 text-center">
+              <div className="rounded-[2rem] border border-white/10 bg-white/5 p-4 shadow-2xl sm:p-6 md:p-8">
+                <div className="flex min-h-[420px] flex-col items-center justify-between overflow-hidden rounded-[1.5rem] bg-gradient-to-br from-neutral-900 via-black to-neutral-950 p-6 text-center sm:min-h-[500px] sm:p-8 md:aspect-[4/5] md:min-h-0">
                   <img
                     src="/STJPGLOGONOBG.png"
                     alt="STJPG Photography Studio logo"
-                    className="w-full max-w-md object-contain drop-shadow-2xl"
+                    className="w-full max-w-[220px] object-contain drop-shadow-2xl sm:max-w-[280px] md:max-w-md"
                   />
-                  <div className="mt-8 rounded-3xl bg-white/[0.06] p-6 backdrop-blur-md">
-                    <p className="text-sm uppercase tracking-[0.25em] text-neutral-300">
+
+                  <div className="mt-6 w-full rounded-3xl bg-white/[0.06] p-5 backdrop-blur-md sm:mt-8 sm:p-6">
+                    <p className="text-xs uppercase tracking-[0.25em] text-neutral-300 sm:text-sm">
                       Photography Studio
                     </p>
-                    <h3 className="mt-2 text-3xl font-bold">
+                    <h3 className="mt-2 text-2xl font-bold sm:text-3xl">
                       HDR + Drone + Reel
                     </h3>
-                    <p className="mt-3 text-neutral-300">
+                    <p className="mt-3 text-sm text-neutral-300 sm:text-base">
                       Premium real estate media including HDR photos, drone
                       coverage, video, and floor plans.
                     </p>
