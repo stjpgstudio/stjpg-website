@@ -12,6 +12,7 @@ import {
   MapPin,
   ArrowRight,
   Star,
+  Play,
 } from "lucide-react";
 
 export default function RealEstateMediaWebsite() {
@@ -47,37 +48,6 @@ export default function RealEstateMediaWebsite() {
     { sqft: "5,501+ sq ft", price: "Custom Quote" },
   ];
 
-  const portfolioItems = [
-    {
-      title: "Thumbnail",
-      image: "/OUTSIDE.jpg",
-    },
-    {
-      title: "Interior Photo",
-      image: "/INSIDE1.jpg",
-    },
-    {
-      title: "Interior Detail",
-      image: "/INSIDE2.jpg",
-    },
-    {
-      title: "Drone Exterior",
-      image: "",
-    },
-    {
-      title: "Neighbourhood Shot",
-      image: "",
-    },
-    {
-      title: "Twilight Exterior",
-      image: "",
-    },
-    {
-      title: "Social Reel",
-      image: "",
-    },
-  ];
-
   const [state, handleQuoteSubmit] = useForm("xgornrag");
 
   return (
@@ -98,6 +68,9 @@ export default function RealEstateMediaWebsite() {
             </a>
             <a href="#work" className="hover:text-white">
               Portfolio
+            </a>
+            <a href="#videos" className="hover:text-white">
+              Videos
             </a>
             <a href="#pricing" className="hover:text-white">
               Pricing
@@ -272,39 +245,146 @@ export default function RealEstateMediaWebsite() {
                 </h2>
               </div>
               <p className="max-w-md text-neutral-400">
-                A sample of our real estate photography, drone coverage, and
-                listing media.
+                A sample of our real estate photography and listing media.
               </p>
             </div>
 
             <div className="grid gap-5 md:grid-cols-3">
-              {portfolioItems.map((item, index) => (
-                <div
-                  key={item.title}
-                  className={`group overflow-hidden rounded-3xl border border-white/10 bg-white/[0.04] ${
-                    index === 0 ? "md:col-span-2" : ""
-                  }`}
-                >
-                  <div className="relative flex aspect-video items-end overflow-hidden bg-gradient-to-br from-neutral-700 to-neutral-950 p-6">
-                    {item.image && (
+              <div className="group overflow-hidden rounded-3xl border border-white/10 bg-white/[0.04] md:col-span-2 md:row-span-2">
+                <div className="relative flex h-full min-h-[420px] items-end overflow-hidden bg-gradient-to-br from-neutral-700 to-neutral-950 p-6">
+                  <img
+                    src="/OUTSIDE.jpg"
+                    alt="Thumbnail"
+                    className="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+                  <div className="relative z-10">
+                    <p className="text-sm text-neutral-300">Project 1</p>
+                    <h3 className="text-2xl font-bold">Thumbnail</h3>
+                  </div>
+                </div>
+              </div>
+
+              <div className="overflow-hidden rounded-3xl border border-white/10 bg-white/[0.04] md:row-span-2">
+                <div className="p-4">
+                  <div className="mb-4">
+                    <p className="text-sm text-neutral-300">Project 2</p>
+                    <h3 className="text-2xl font-bold">Interior Photos</h3>
+                  </div>
+
+                  <div className="grid gap-4">
+                    <div className="relative overflow-hidden rounded-2xl">
                       <img
-                        src={item.image}
-                        alt={item.title}
-                        className="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                        src="/INSIDE1.jpg"
+                        alt="Interior Photo 1"
+                        className="h-56 w-full object-cover"
                       />
-                    )}
+                    </div>
 
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-
-                    <div className="relative z-10">
-                      <p className="text-sm text-neutral-300">
-                        Project {index + 1}
-                      </p>
-                      <h3 className="text-2xl font-bold">{item.title}</h3>
+                    <div className="relative overflow-hidden rounded-2xl">
+                      <img
+                        src="/INSIDE2.jpg"
+                        alt="Interior Photo 2"
+                        className="h-56 w-full object-cover"
+                      />
                     </div>
                   </div>
                 </div>
-              ))}
+              </div>
+
+              <div className="group overflow-hidden rounded-3xl border border-white/10 bg-white/[0.04]">
+                <div className="relative flex aspect-video items-end overflow-hidden bg-gradient-to-br from-neutral-700 to-neutral-950 p-6">
+                  <img
+                    src="/FLOORPLAN.jpg"
+                    alt="2D Floor Plan"
+                    className="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+                  <div className="relative z-10">
+                    <p className="text-sm text-neutral-300">Project 3</p>
+                    <h3 className="text-2xl font-bold">2D Floor Plan</h3>
+                  </div>
+                </div>
+              </div>
+
+              <div className="group overflow-hidden rounded-3xl border border-white/10 bg-white/[0.04]">
+                <div className="relative flex aspect-video items-end overflow-hidden bg-gradient-to-br from-neutral-700 to-neutral-950 p-6">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+                  <div className="relative z-10">
+                    <p className="text-sm text-neutral-300">Project 4</p>
+                    <h3 className="text-2xl font-bold">Drone Shot</h3>
+                  </div>
+                </div>
+              </div>
+
+              <div className="group overflow-hidden rounded-3xl border border-white/10 bg-white/[0.04]">
+                <div className="relative flex aspect-video items-end overflow-hidden bg-gradient-to-br from-neutral-700 to-neutral-950 p-6">
+                  <img
+                    src="/OUTSIDEDARK.png"
+                    alt="Twilight Exterior"
+                    className="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+                  <div className="relative z-10">
+                    <p className="text-sm text-neutral-300">Project 5</p>
+                    <h3 className="text-2xl font-bold">Twilight Exterior</h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="videos" className="px-6 py-20">
+          <div className="mx-auto max-w-7xl">
+            <div className="mb-10 flex flex-col justify-between gap-5 md:flex-row md:items-end">
+              <div>
+                <p className="text-sm font-semibold uppercase tracking-[0.25em] text-neutral-400">
+                  Video
+                </p>
+                <h2 className="mt-3 text-4xl font-bold md:text-5xl">
+                  Video content for listings and social media.
+                </h2>
+              </div>
+              <p className="max-w-md text-neutral-400">
+                Professional video options that help agents market properties in
+                a more premium way.
+              </p>
+            </div>
+
+            <div className="grid gap-5 md:grid-cols-2">
+              <div className="overflow-hidden rounded-3xl border border-white/10 bg-white/[0.04]">
+                <div className="relative aspect-video bg-black">
+                  <video
+                    controls
+                    className="h-full w-full object-cover"
+                    src="/PROVIDEOHOR.mp4"
+                  />
+                </div>
+                <div className="p-8">
+                  <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-white text-neutral-950">
+                    <Play size={24} />
+                  </div>
+                  <h3 className="text-3xl font-bold">Horizontal Video</h3>
+                  <p className="mt-4 leading-7 text-neutral-400">
+                    Professional horizontal video showing the full property in a
+                    clean and cinematic way. Perfect for websites, YouTube, and
+                    premium listing presentations.
+                  </p>
+                </div>
+              </div>
+
+              <div className="rounded-3xl border border-white/10 bg-white/[0.04] p-8">
+                <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-white text-neutral-950">
+                  <Video size={24} />
+                </div>
+                <h3 className="text-3xl font-bold">Social Reel</h3>
+                <p className="mt-4 leading-7 text-neutral-400">
+                  Short vertical social reel made for Instagram Reels, TikTok,
+                  and YouTube Shorts. Great for grabbing attention fast and
+                  helping agents grow online.
+                </p>
+              </div>
             </div>
           </div>
         </section>
@@ -365,7 +445,7 @@ export default function RealEstateMediaWebsite() {
                     video
                   </div>
                   <div className="flex gap-3">
-                    <CheckCircle className="mt-1 shrink-0" size={20} />{" "}
+                    <CheckCircle className="mt-1 shrink-0" size={20} />
                     Professional 60 seconds horizontal video
                   </div>
                   <div className="flex gap-3">
