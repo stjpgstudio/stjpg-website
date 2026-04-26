@@ -40,11 +40,11 @@ export default function RealEstateMediaWebsite() {
   ];
 
   const priceTiers = [
-    { sqft: "Up to 1,500 sq ft", price: "$200" },
-    { sqft: "1,501 - 2,500 sq ft", price: "$250" },
-    { sqft: "2,501 - 3,500 sq ft", price: "$300" },
-    { sqft: "3,501 - 4,500 sq ft", price: "$350" },
-    { sqft: "4,501 - 5,500 sq ft", price: "$400" },
+    { sqft: "Up to 1,500 sq ft", price: "$250" },
+    { sqft: "1,501 - 2,500 sq ft", price: "$350" },
+    { sqft: "2,501 - 3,500 sq ft", price: "$450" },
+    { sqft: "3,501 - 4,500 sq ft", price: "$550" },
+    { sqft: "4,501 - 5,500 sq ft", price: "$650" },
     { sqft: "5,501+ sq ft", price: "Custom Quote" },
   ];
 
@@ -310,6 +310,11 @@ export default function RealEstateMediaWebsite() {
 
               <div className="group overflow-hidden rounded-3xl border border-white/10 bg-white/[0.04]">
                 <div className="relative flex aspect-video items-end overflow-hidden bg-gradient-to-br from-neutral-700 to-neutral-950 p-6">
+                  <img
+                    src="/droneshot2.png"
+                    alt="Drone Shot"
+                    className="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                  />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
                   <div className="relative z-10">
                     <p className="text-sm text-neutral-300">Project 4</p>
@@ -408,9 +413,7 @@ export default function RealEstateMediaWebsite() {
 
             <div className="mt-12 grid gap-8 md:grid-cols-2">
               <div className="rounded-3xl border border-white/10 bg-white/[0.04] p-7">
-                <h3 className="text-2xl font-bold">
-                  Quote by square footage
-                </h3>
+                <h3 className="text-2xl font-bold">Quote by square footage</h3>
                 <p className="mt-2 text-neutral-400">
                   Choose the size range that matches the property.
                 </p>
