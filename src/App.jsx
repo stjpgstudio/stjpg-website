@@ -40,11 +40,11 @@ export default function RealEstateMediaWebsite() {
   ];
 
   const priceTiers = [
-    { sqft: "Up to 1,500 sq ft", price: "$250" },
-    { sqft: "1,501 - 2,500 sq ft", price: "$350" },
-    { sqft: "2,501 - 3,500 sq ft", price: "$450" },
-    { sqft: "3,501 - 4,500 sq ft", price: "$550" },
-    { sqft: "4,501 - 5,500 sq ft", price: "$650" },
+    { sqft: "Up to 1,500 sq ft", price: "$200" },
+    { sqft: "1,501 - 2,500 sq ft", price: "$250" },
+    { sqft: "2,501 - 3,500 sq ft", price: "$300" },
+    { sqft: "3,501 - 4,500 sq ft", price: "$350" },
+    { sqft: "4,501 - 5,500 sq ft", price: "$400" },
     { sqft: "5,501+ sq ft", price: "Custom Quote" },
   ];
 
@@ -556,11 +556,11 @@ export default function RealEstateMediaWebsite() {
                   name="packageRange"
                   className="rounded-2xl border border-white/10 bg-neutral-900 px-4 py-4 text-white outline-none focus:border-white/40"
                 >
-                  <option>Up to 1,500 sq ft - $250</option>
-                  <option>1,501 - 2,500 sq ft - $350</option>
-                  <option>2,501 - 3,500 sq ft - $450</option>
-                  <option>3,501 - 4,500 sq ft - $550</option>
-                  <option>4,501 - 5,500 sq ft - $650</option>
+                  <option>Up to 1,500 sq ft - $200</option>
+                  <option>1,501 - 2,500 sq ft - $250</option>
+                  <option>2,501 - 3,500 sq ft - $300</option>
+                  <option>3,501 - 4,500 sq ft - $350</option>
+                  <option>4,501 - 5,500 sq ft - $400</option>
                   <option>5,501+ sq ft - Custom Quote</option>
                 </select>
                 <textarea
